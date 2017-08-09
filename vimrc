@@ -7,31 +7,23 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set autoindent
 set hlsearch
+set incsearch
+set smartcase
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-" Configuration file for vim
-set modelines=0		" CVE-2007-2438
-
-" Normally we use vim-extensions. If you want true vi-compatibility
-" remove change the following statements
-set backspace=2		" more powerful backspacing
-
+set list
+set modelines=0
+" vuddle shit
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'dracula/vim'
 Plugin 'pangloss/vim-javascript'
-
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
