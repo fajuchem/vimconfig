@@ -1,7 +1,9 @@
+runtime macros/matchit.vim
+set colorcolumn=120
+highlight ColorColumn ctermbg=8
 set nocompatible
 set number
 set relativenumber
-colorscheme dracula 
 syntax enable
 set expandtab
 set tabstop=4
@@ -10,8 +12,9 @@ set shiftwidth=4
 set autoindent
 set hlsearch
 set incsearch
+set listchars=eol:$,tab:>-,trail:-,extends:-,precedes:-
+hi NonText ctermfg=7 guifg=gray
 set smartcase
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set list
 set modelines=0
 " vuddle shit
@@ -26,16 +29,6 @@ Plugin 'dracula/vim'
 Plugin 'pangloss/vim-javascript'
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just
-":PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to
-"auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this linevkk.
+color dracula
+hi NonText ctermfg=247 guifg=grey
+highlight SpecialKey ctermfg=grey
