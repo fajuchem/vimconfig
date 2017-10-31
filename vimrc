@@ -14,7 +14,7 @@ set hlsearch
 set incsearch
 set listchars=eol:$,tab:>-,trail:-,extends:-,precedes:-
 hi NonText ctermfg=7 guifg=gray
-set smartcase
+set ignorecase
 set list
 set modelines=0
 " vuddle shit
