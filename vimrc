@@ -1,4 +1,5 @@
 runtime macros/matchit.vim
+"set termguicolors
 set colorcolumn=120
 highlight ColorColumn ctermbg=8
 set nocompatible
@@ -17,6 +18,9 @@ hi NonText ctermfg=7 guifg=gray
 set ignorecase
 set list
 set modelines=0
+set tags+=tags,tags.vendors
+" tagbar
+nmap <F8> :TagbarToggle<CR>nmap <F8> :TagbarToggle<CR>
 " vuddle shit
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -27,8 +31,20 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'dracula/vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'evidens/vim-twig'
+Plugin 'majutsushi/tagbar'
+Plugin 'StanAngeloff/php.vim'
+Plugin '2072/PHP-Indenting-for-VIm'
+Plugin 'arnaud-lb/vim-php-namespace'
 call vundle#end()            " required
 filetype plugin indent on    " required
 color dracula
 hi NonText ctermfg=247 guifg=grey
 highlight SpecialKey ctermfg=grey
+" auto use statement
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
