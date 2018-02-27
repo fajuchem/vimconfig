@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
+<<<<<<< HEAD
 let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/felipe/htdocs/b2b-maiscontinental-master/b2b/application/modules/admin/views/scripts/orders'
 let g:netrw_dirhist_2='/home/felipe/htdocs/b2b-catavento-master/b2b/application/models/Integration'
@@ -9,3 +10,13 @@ let g:netrw_dirhist_6='/home/felipe/.scripts'
 let g:netrw_dirhist_7='/home/felipe/htdocs/b2b-proshows-master/b2b/public/skins/admin/js/discount-coupons-lot'
 let g:netrw_dirhist_8='/home/felipe/htdocs/b2b-proshows-master/b2b'
 let g:netrw_dirhist_9='/home/felipe/htdocs/b2b-proshows-master'
+=======
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/etc/php/7.1'
+let g:netrw_dirhist_2='/etc/php/7.1/apache2'
+let g:netrw_dirhist_3='/var/www/html/juchem/models'
+let g:netrw_dirhist_4='/var/www/html/juchem/vendor'
+let g:netrw_dirhist_5='/var/www/html/juchem/model'
+let g:netrw_dirhist_6='/var/www/html/library/juchem/src/Test'
+let g:netrw_dirhist_7='/var/www/html/symfonyskeleton/config/routes'
+>>>>>>> 8d149e89603f0df47213850c6706433910614a76

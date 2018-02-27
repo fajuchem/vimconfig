@@ -1,3 +1,14 @@
 Instalation:
 
 `git clone https://github.com/fajuchem/vimconfig ~/.vim
+
+
+@TODO
+
+Criar cron para rodar isso automático, também guardar isso em um diretório padrão não na raiz do projeto.
+
+# dependencies tags file (index only the vendor directory, and save tags in ./tags.vendors)
+ctags -R --PHP-kinds=cfi -f tags.vendors vendor
+
+# project tags file (index only src, and save tags in ./tags; AutoTags will update this one)
+ctags -R --PHP-kinds=cfi src
