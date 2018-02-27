@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/felipe/htdocs/b2b-maiscontinental-master/b2b/application/modules/admin/views/scripts/orders'
+let g:netrw_dirhist_2='/home/felipe/htdocs/b2b-catavento-master/b2b/application/models/Integration'
+let g:netrw_dirhist_3='/usr/share/apache2'
+let g:netrw_dirhist_4='/home/felipe/htdocs/revenda-mazer'
+let g:netrw_dirhist_5='/home/felipe/Downloads'
+let g:netrw_dirhist_6='/home/felipe/.scripts'
+let g:netrw_dirhist_7='/home/felipe/htdocs/b2b-proshows-master/b2b/public/skins/admin/js/discount-coupons-lot'
+let g:netrw_dirhist_8='/home/felipe/htdocs/b2b-proshows-master/b2b'
+let g:netrw_dirhist_9='/home/felipe/htdocs/b2b-proshows-master'

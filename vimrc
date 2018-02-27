@@ -24,11 +24,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'dracula/vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'SQLUtilities'
+Plugin 'Align'
+Plugin 'scrooloose/nerdtree'
+Plugin 'elzr/vim-json'
 call vundle#end()            " required
 filetype plugin indent on    " required
 color dracula
 hi NonText ctermfg=247 guifg=grey
 highlight SpecialKey ctermfg=grey
+map <silent> <C-n> :NERDTreeToggle<CR>
