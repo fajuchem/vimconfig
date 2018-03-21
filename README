@@ -1,6 +1,6 @@
 instalação:
 
-git clone https://github.com/fajuchem/vimconfig ~/.vim && git clone https://github.com/fajuchem/vimconfig ~/.vim && git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qal
+git clone https://github.com/fajuchem/vimconfig ~/.vim && git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qal
 
 
 @TODO
