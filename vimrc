@@ -1,9 +1,10 @@
 runtime macros/matchit.vim
 syntax enable
+highlight ColorColumn ctermbg=8
+highlight SpecialKey ctermfg=grey
 let mapleader = '\'
 set colorcolumn=120
-hi NonText ctermfg=7 guifg=gray
-highlight ColorColumn ctermbg=8
+set wildmenu
 set nocompatible
 set number
 set relativenumber
@@ -22,6 +23,13 @@ set tags+=tags,tags.vendors
 " Ativa salvamento dos undos
 set undodir=/tmp/
 set undofile
+" remaps
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+nnoremap <C-X> :bdelete<CR>
+map <leader>l :ls<CR>
+map <leader>r :reg<CR>
+map <silent> <C-n> :NERDTreeToggle<CR>
 " vuddle shit
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -30,25 +38,23 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'dracula/vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'SQLUtilities'
-Plugin 'Align'
 Plugin 'scrooloose/nerdtree'
 Plugin 'elzr/vim-json'
 Plugin 'evidens/vim-twig'
-Plugin 'StanAngeloff/php.vim'
 Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'szw/vim-tags'
+Plugin 'Align'
 Plugin 'grep.vim'
+Plugin 'vim-airline/vim-airline'
 call vundle#end()            " required
 filetype plugin indent on    " required
+" seta color precisa ser usada depois de dar load nos plugins
 color dracula
 hi NonText ctermfg=247 guifg=grey
-highlight SpecialKey ctermfg=grey
-map <silent> <C-n> :NERDTreeToggle<CR>
 " auto use statement
 function! IPhpInsertUse()
     call PhpInsertUse()
@@ -65,3 +71,8 @@ function! XTermPasteBegin()
     set paste
     return ""
 endfunction
+" airline plugin configs
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_section_x = '%{strftime("%d/%m %r")}'
+let g:airline_section_y = 'BN: %{bufnr("%")}'
