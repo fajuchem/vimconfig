@@ -5,6 +5,7 @@ highlight SpecialKey ctermfg=grey
 let mapleader = '\'
 set colorcolumn=120
 set wildmenu
+set autowrite
 set nocompatible
 set number
 set relativenumber
@@ -30,6 +31,8 @@ nnoremap <C-X> :bdelete<CR>
 map <leader>l :ls<CR>
 map <leader>r :reg<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
+map <c-k> :m-2<CR>
+map <c-j> :m+1<CR>
 " vuddle shit
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -42,14 +45,21 @@ Plugin 'dracula/vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'SQLUtilities'
 Plugin 'scrooloose/nerdtree'
-Plugin 'elzr/vim-json'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'evidens/vim-twig'
-Plugin '2072/PHP-Indenting-for-VIm'
+"Plugin '2072/PHP-Indenting-for-VIm'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 Plugin 'arnaud-lb/vim-php-namespace'
-Plugin 'szw/vim-tags'
 Plugin 'Align'
-Plugin 'grep.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'scrooloose/syntastic'
+"Plugin 'docteurklein/php-getter-setter.vim'
+Plugin 'adoy/vim-php-refactoring-toolbox'
+Plugin 'tobys/vmustache'
+Plugin 'tobyS/pdv'
+Plugin 'phpactor/phpactor'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " seta color precisa ser usada depois de dar load nos plugins
@@ -76,3 +86,24 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_section_x = '%{strftime("%d/%m %r")}'
 let g:airline_section_y = 'BN: %{bufnr("%")}'
+" vim montion configs
+let g:EasyMotion_smartcase = 1
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+" syntaic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
