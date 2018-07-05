@@ -42,7 +42,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'dracula/vim'
-Plugin 'pangloss/vim-javascript'
 Plugin 'SQLUtilities'
 Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
@@ -54,12 +53,12 @@ Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'Align'
 Plugin 'vim-airline/vim-airline'
 Plugin 'stephpy/vim-php-cs-fixer'
-Plugin 'scrooloose/syntastic'
 "Plugin 'docteurklein/php-getter-setter.vim'
 Plugin 'adoy/vim-php-refactoring-toolbox'
 Plugin 'tobys/vmustache'
 Plugin 'tobyS/pdv'
-Plugin 'phpactor/phpactor'
+Plugin 'w0rp/ale'
+Plugin 'chrisbra/csv.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " seta color precisa ser usada depois de dar load nos plugins
@@ -107,3 +106,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" ale
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\   'php': ['php_cs_fixer'],
+\}
+let g:ale_completion_enabled = 1
+let b:ale_set_balloons = 1
+"let g:ale_fix_on_save = 1
