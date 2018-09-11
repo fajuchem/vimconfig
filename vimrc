@@ -3,6 +3,7 @@ syntax enable
 highlight ColorColumn ctermbg=8
 highlight SpecialKey ctermfg=grey
 let mapleader = '\'
+set t_Co=256
 set colorcolumn=120
 set wildmenu
 set autowrite
@@ -25,6 +26,8 @@ set tags+=tags,tags.vendors
 set undodir=/tmp/
 set undofile
 " remaps
+map <F2> :mksession! ~/vim_session <cr>
+map <F3> :source ~/vim_session <cr>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <C-X> :bdelete<CR>
@@ -56,8 +59,8 @@ Plugin 'stephpy/vim-php-cs-fixer'
 "Plugin 'docteurklein/php-getter-setter.vim'
 Plugin 'adoy/vim-php-refactoring-toolbox'
 Plugin 'tobys/vmustache'
-Plugin 'tobyS/pdv'
-Plugin 'w0rp/ale'
+"Plugin 'tobyS/pdv'
+"Plugin 'w0rp/ale'
 Plugin 'chrisbra/csv.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
