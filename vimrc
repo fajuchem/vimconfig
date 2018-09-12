@@ -65,7 +65,6 @@ Plugin 'chrisbra/csv.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " seta color precisa ser usada depois de dar load nos plugins
-color dracula
 hi NonText ctermfg=247 guifg=grey
 " auto use statement
 function! IPhpInsertUse()
@@ -118,3 +117,5 @@ let g:ale_fixers = {
 let g:ale_completion_enabled = 1
 let b:ale_set_balloons = 1
 "let g:ale_fix_on_save = 1
+colorscheme dracula
+highlight Normal ctermbg=None
