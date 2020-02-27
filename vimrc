@@ -60,7 +60,6 @@ Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'adoy/vim-php-refactoring-toolbox'
 Plugin 'tobys/vmustache'
 "Plugin 'tobyS/pdv'
-"Plugin 'w0rp/ale'
 Plugin 'chrisbra/csv.vim'
 Plugin 'dense-analysis/ale'
 Plugin 'leafgarland/typescript-vim'
@@ -111,6 +110,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+"colorscheme dracula
 colorscheme bw
 highlight Normal ctermbg=None
 "syntax off
@@ -119,8 +119,14 @@ highlight Normal ctermbg=None
 
 
 let b:ale_fixers = {'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'eslint']}
+let g:ale_linters = {'php': ['php', 'langserver', 'phan']}
+let g:ale_php_langserver_executable = expand('~/.config/composer/vendor/bin/php-language-server.php')
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
-set omnifunc=ale#completion#OmniFunc
+"set omnifunc=ale#completion#OmniFunc
 let g:ale_completion_tsserver_autoimport = 1
-highlight ALEWarning ctermbg=DarkMagenta
+highlight ALEWarning ctermfg=white ctermbg=5
+highlight ALEError ctermfg=white ctermbg=red
+
+packloadall
+silent! helptags ALL

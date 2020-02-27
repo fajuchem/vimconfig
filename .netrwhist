@@ -1,6 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/felipe/htdocs/b2b-mazer-master/b2b/tests/unit'
-let g:netrw_dirhist_2='/home/felipe/htdocs/b2b-caimi-master/b2b/application/helpers'
-let g:netrw_dirhist_3='/home/felipe/htdocs/b2b-caimi-master/b2b/application'
-let g:netrw_dirhist_4='/home/felipe/htdocs/b2b-caimi-master/b2b'
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/felipe/htdocs/top/src/produtos/dto'
+let g:netrw_dirhist_1='/home/felipe/htdocs/top/src/produtos'
