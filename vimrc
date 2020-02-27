@@ -1,8 +1,7 @@
 runtime macros/matchit.vim
 syntax enable
-highlight ColorColumn ctermbg=8
-highlight SpecialKey ctermfg=grey
 let mapleader = '\'
+set backspace=indent,eol,start
 set t_Co=256
 set colorcolumn=120
 set wildmenu
@@ -17,9 +16,11 @@ set shiftwidth=4
 set autoindent
 set hlsearch
 set incsearch
-set listchars=eol:$,tab:>-,trail:-,extends:-,precedes:-
-set ignorecase
 set list
+set listchars=eol:$,tab:>-,trail:-,extends:-,precedes:-
+highlight ColorColumn ctermbg=8
+highlight SpecialKey ctermfg=grey
+set ignorecase
 set modelines=0
 set tags+=tags,tags.vendors
 " Ativa salvamento dos undos
@@ -62,6 +63,7 @@ Plugin 'tobys/vmustache'
 "Plugin 'tobyS/pdv'
 Plugin 'chrisbra/csv.vim'
 Plugin 'dense-analysis/ale'
+Plugin 'fatih/vim-go'
 Plugin 'leafgarland/typescript-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -125,6 +127,7 @@ let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 "set omnifunc=ale#completion#OmniFunc
 let g:ale_completion_tsserver_autoimport = 1
+
 highlight ALEWarning ctermfg=white ctermbg=5
 highlight ALEError ctermfg=white ctermbg=red
 
