@@ -5,7 +5,7 @@
 
 let g:colors_name="bw"
 
-hi SpecialKey     cterm=NONE            ctermfg=NONE
+hi SpecialKey     cterm=NONE            ctermfg=240
 hi NonText        cterm=NONE            ctermfg=NONE
 hi Directory      cterm=NONE            ctermfg=NONE
 hi ErrorMsg       cterm=standout        ctermfg=NONE
